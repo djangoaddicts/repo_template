@@ -1,20 +1,24 @@
 dependencies = [
     "django",
+    "django-auditlog==2.2.0"
     "django-braces",
+    "django-debug-toolbar",
     "django-environ",
     "django-extensions",
     "django-filter",
     "django-handyhelpers",
+    "django-hostutils",
     "django-userextensions",
-    "djangorestframework==3.13.1",
+    "djangorestframework",
     "djangorestframework-filters==1.0.0.dev0",
     "drf-flex-fields",
+    "drf-spectacular",
 ]
-description = ""
+description = "django project created from djangoaddicts django_project_template"
 dynamic = ["version"]
 keywords = ["django"]
 license = {file = "LICENSE"}
-name = ""
+name = "my_django_project"
 readme = "README.md"
 requires-python = ">=3.8"
 
@@ -23,9 +27,7 @@ requires-python = ">=3.8"
 dev = [
     "bandit",
     "black",
-    "build",
     "coveralls",
-    "django-environ",
     "isort",
     "model-bakery",
     "mypy",
@@ -36,11 +38,8 @@ dev = [
     "pytest-django",
     "radon",
     "safety",
-    "setuptools >= 67.7.2",
-	"setuptools_scm >= 7.1",
     "types-python-dateutil",
     "typing_extensions",
-    "wheel >= 0.40.0",
 ]
 
 [tool.bandit]
