@@ -1,0 +1,100 @@
+dependencies = [
+    "django",
+    "django-braces",
+    "django-environ",
+    "django-extensions",
+    "django-filter",
+    "django-handyhelpers",
+    "django-userextensions",
+    "djangorestframework==3.13.1",
+    "djangorestframework-filters==1.0.0.dev0",
+    "drf-flex-fields",
+]
+description = ""
+dynamic = ["version"]
+keywords = ["django"]
+license = {file = "LICENSE"}
+name = ""
+readme = "README.md"
+requires-python = ">=3.8"
+
+
+[project.optional-dependencies]
+dev = [
+    "bandit",
+    "black",
+    "build",
+    "coveralls",
+    "django-environ",
+    "isort",
+    "model-bakery",
+    "mypy",
+    "mypy-extensions",
+    "ruff",
+    "pytest",
+    "pytest-cov",
+    "pytest-django",
+    "radon",
+    "safety",
+    "setuptools >= 67.7.2",
+	"setuptools_scm >= 7.1",
+    "types-python-dateutil",
+    "typing_extensions",
+    "wheel >= 0.40.0",
+]
+
+[tool.bandit]
+exclude_dirs = ["venv", "django_project/tests"]
+
+
+[tool.black]
+line-length = 120
+
+
+[tool.coverage.report]
+show_missing = true
+
+
+[tool.coverage.run]
+branch = true
+source = ["django_project"]
+omit = [
+    "django_project/manage.py", 
+    "django_project/core/asgi.py",
+    "django_project/core/wsgi.py", 
+    "django_project/*/scripts/*",
+    "django_project/tests/*", 
+    ]
+
+
+[tool.flake8]
+ignore = "E203,E266,H106,H904,E133"
+max-line-length = 120
+max-complexity = 25
+hang-closing = true
+exclude = "django_project/manage.py, django_project/*/scripts"
+
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.pylint.MASTER]
+ignore-paths = ["django_project/manage.py", "django_project/tests", "django_project/storemgr/migrations", "django_project/*/scripts", "django_project/*/local_test"]
+exit-zero = true
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "R0903,R0913,R0901,W0613,W0718,C0114,C0115,C0103,R1725"
+
+
+[tool.pytest.ini_options]
+addopts = "-s -v -x --strict-markers -m 'not extra' --cov=django_project"
+testpaths = ["django_project"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+
+[tool.ruff]
+line-length = 120
+exclude = ["django_project/manage.py", "django_project/tests", "django_project/*/migrations", "django_project/*/scripts", "django_project/*/local_test"]
