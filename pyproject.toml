@@ -9,6 +9,7 @@ dependencies = [
     "django-handyhelpers",
     "django-hostutils",
     "django-userextensions",
+    "django-signalcontrol",
     "djangorestframework",
     "djangorestframework-filters==1.0.0.dev0",
     "drf-flex-fields",
