@@ -16,6 +16,7 @@ dependencies = [
     "djangorestframework-filters==1.0.0.dev0",
     "drf-flex-fields",
     "drf-spectacular",
+    "drf-renderer-xlsx",
 ]
 description = "django project created from djangoaddicts django_project_template"
 dynamic = ["version"]
