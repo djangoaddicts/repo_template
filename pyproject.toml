@@ -10,6 +10,7 @@ dependencies = [
     "django-handyhelpers",
     "django-hostutils",
     "django-userextensions",
+    "django-pygwalker",
     "django-signalcontrol",
     "djangorestframework",
     "djangorestframework-filters==1.0.0.dev0",
