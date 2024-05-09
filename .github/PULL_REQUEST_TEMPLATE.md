@@ -4,7 +4,7 @@
 Provide a brief description of the changes introduced by this pull request
 
 ### Related Issue(s):
-Add links to applicable Github issues
+Add links to applicable Issues
 - #1
 - #2
 
@@ -16,6 +16,5 @@ Add links to applicable Github issues
 
 ### Testing:
 - [ ] Existing tests provided necessary coverage
-- [ ] Applicable tests have been updated
-- [ ] Applicable tests have been added
+- [ ] Applicable tests have been added/updated
 - [ ] This change does not require testing

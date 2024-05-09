@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: "safety"
     steps:
-      - uses: davidslusser/actions_python_safety@v1.0.0
+      - uses: davidslusser/actions_python_safety@v1.0.2
         with:
-          options: "--debug"
+          options: "-i 65213"
           pip_install_command: "pip install -e .[dev]"
           python_version: "3.11"
